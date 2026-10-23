@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre mí — Sarah Natera</title>
+<meta name="description" content="Conoce a Sarah Natera, Médico Cirujano especializada en medicina estética facial. Trayectoria internacional, formación de élite y una mirada natural.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Estilos específicos para un aire de clínica de élite */
+  .about-content p, 
+  .about-content li {
+    color: var(--texto);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  .about-content ul {
+    list-style-position: outside;
+    padding-left: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .about-content li {
+    margin-bottom: 1.2rem;
+  }
+  
+  /* El retrato de autoridad */
+  .portrait-container {
+    text-align: center;
+    margin: 2rem 0 3.5rem 0;
+  }
+  .portrait-container img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(31,61,43,0.15);
+    border: 4px solid var(--blanco-roto);
+    outline: 1px solid var(--beige-medio);
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo" data-i18n="logo">Sarah Natera <span>Clínica Estética</span></a>
+    <button class="menu-toggle">☰</button>
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap;">
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+          <li><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></li>
+          <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+          <li><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></li>
+        </ul>
+      </nav>
+      
+      <div class="lang-switcher">
+        <a href="#" onclick="cambiarIdioma('es'); return false;" class="active" title="Español">
+          <img src="https://flagcdn.com/w20/es.png" alt="Español">
+        </a>
+        <a href="#" onclick="cambiarIdioma('en'); return false;" title="English">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English">
+        </a>
+        <a href="#" onclick="cambiarIdioma('sr'); return false;" title="Srpski">
+          <img src="https://flagcdn.com/w20/rs.png" alt="Srpski">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Portada con el nombre -->
+<section class="hero" style="padding:4rem 0 2rem">
+  <div class="container">
+    <h1 data-i18n="about_titulo">Sarah Natera</h1>
+    <p data-i18n="about_sub">Médico Cirujano especializada en medicina estética facial. Años de dedicación exclusiva, formación internacional y una mirada natural.</p>
+  </div>
+</section>
+
+<!-- Sección de contenido con la foto redonda -->
+<section class="about-content">
+  <div class="container" style="max-width:820px">
+    
+    <!-- Foto redonda e íntima -->
+    <div class="portrait-container">
+      <img src="assets/img/sarah.jfif" alt="Dra. Sarah Natera" loading="lazy">
+    </div>
+
+    <!-- Sección 1: Trayectoria -->
+    <h2 data-i18n="about_trayectoria_titulo" style="margin-top:0">Una médico dedicada a la estética</h2>
+    
+    <p data-i18n="about_trayectoria_texto1">La Dra. Sarah Natera es <strong>Médico Cirujano</strong>, no solo es una aplicadora de tratamientos. Su carrera se ha centrado durante años de forma exclusiva en la medicina estética facial y corporal, combinando la práctica clínica de alta gama con la formación de otros médicos a nivel global.</p>
+    
+    <p data-i18n="about_trayectoria_texto2">Originaria de Venezuela, ha desarrollado su carrera internacionalmente y hoy ejerce en Europa, concretamente en <strong>Serbia</strong> (área metropolitana de Belgrado), donde dirige su práctica privada y sus proyectos médicos.</p>
+
+    <hr style="border: 0; border-top: 1px solid var(--beige-medio); margin: 3rem 0;">
+
+    <!-- Sección 2: Por qué confiar -->
+    <h2 data-i18n="about_confiar_titulo">Por qué confiar en la Dra. Sarah Natera</h2>
+    
+    <ul>
+      <li data-i18n="about_confiar_1"><strong>Médico especializada en estética.</strong> No se trata solo de aplicar tratamientos, sino de hacerlo con el respaldo de un profesional. Su formación médica le permite comprender la anatomía facial en profundidad, diagnosticar con rigor y ofrecer la seguridad que necesitas, combinada con la sensibilidad estética de quien se dedica a embellecer el rostro.</li>
+      
+      <li data-i18n="about_confiar_2"><strong>Dedicación exclusiva a la estética.</strong> Lleva años enfocada exclusivamente en procedimientos estéticos, perfeccionando su técnica en más de 6.000 tratamientos inyectables realizados.</li>
+      
+      <li data-i18n="about_confiar_3"><strong>Formación de élite.</strong> Es <em>Worldwide Trainer</em> para Galderma Aesthetics, una de las farmacéuticas de estética más importantes del mundo. No solo aplica los tratamientos, sino que enseña a otros médicos a hacerlos con los más altos estándares.</li>
+      
+      <li data-i18n="about_confiar_4"><strong>Visión global, trato exclusivo.</strong> Dirigió clínicas en cruceros de lujo y ha ejercido en múltiples continentes. Esa experiencia internacional se traduce hoy en una atención personalizada y de primer nivel en su consulta de Belgrado.</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid var(--beige-medio); margin: 3rem 0;">
+
+    <!-- Sección 3: Filosofía -->
+    <h2 data-i18n="about_filosofia_titulo">El arte de la naturalidad</h2>
+    
+    <p data-i18n="about_filosofia_texto">Creo en la belleza que no grita, sino que susurra. Mi objetivo no es transformar rostros, sino realzar la identidad de cada paciente con armonía y absoluto respeto por la anatomía. Domino las técnicas de armonización para que los resultados se vean frescos, descansados y absolutamente naturales. <strong>Nadie notará que te has hecho un tratamiento, solo que te ves mejor.</strong></p>
+
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container center">
+    <h2 data-i18n="about_cta_titulo">¿Hablamos de tu caso?</h2>
+    <p style="max-width:600px;margin:0 auto 2rem;color:var(--texto-suave)" data-i18n="about_cta_texto">Reserva una consulta personalizada con la Dra. Sarah Natera y descubre cómo podemos realzar tu belleza natural con los más altos estándares médicos.</p>
+    <a href="contacto.html" class="btn btn-primary" data-i18n="btn_cita">Pedir cita</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-i18n="logo_footer">Sarah Natera · Clínica Estética</h4>
+        <p style="font-size:.9rem;opacity:.9" data-i18n="footer_desc">Estética facial y corporal con enfoque médico y natural.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_nav">Navegación</h4>
+        <p><a href="index.html" data-i18n="nav_inicio">Inicio</a></p>
+        <p><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></p>
+        <p><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></p>
+        <p><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contacto">Contacto</h4>
+        <p style="font-size:.9rem">Calle Ejemplo 123<br>Ciudad<br>hola@tuclinica.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer_copy">© 2025 Sarah Natera. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
