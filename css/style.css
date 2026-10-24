@@ -44,7 +44,7 @@ section{padding:4.5rem 0}
 .center{text-align:center}
 
 /* ==========================================
-   3. Header y Navegación
+   3. Header y Navegación (Vista Escritorio)
    ========================================== */
 header{
   position:sticky;top:0;z-index:50;
@@ -53,7 +53,7 @@ header{
   border-bottom:1px solid var(--beige-medio);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;max-width:1140px;margin:0 auto}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--verde-oscuro);font-weight:600;white-space: nowrap;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--verde-oscuro);font-weight:600;white-space:nowrap;}
 .logo span{color:var(--salvia)}
 nav ul{display:flex;gap:1.8rem;list-style:none}
 nav a{font-size:.95rem;color:var(--texto);transition:color .2s}
@@ -100,10 +100,6 @@ nav a:hover{color:var(--verde-oscuro)}
   border:1px solid var(--beige-medio);
   user-select:none;
   isolation:isolate;
-}
-
-.compare[style*="max-width: 100%"] {
-  max-width: 100%;
 }
 
 .compare img{
@@ -228,53 +224,69 @@ footer a:hover{color:#fff}
 }
 
 /* ==========================================
-   11. AJUSTES CRÍTICOS PARA MÓVILES (Responsive)
+   11. DISEÑO EXCLUSIVO PARA MÓVILES
    ========================================== */
-@media(max-width:768px){
-  /* Ocultar el menú por defecto y mostrar el botón hamburguesa */
+@media(max-width: 768px){
+  
+  /* 1. Cambiamos el contenedor del header a columna */
+  .nav {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  /* 2. El logo va arriba del todo, solo y centrado */
+  .logo {
+    font-size: 1.3rem;
+    white-space: normal;
+    text-align: center;
+    order: 1; /* Fuerza a que sea lo primero */
+  }
+
+  /* 3. Creamos una fila debajo para banderas y el menú hamburguesa */
+  header div[style*="display: flex"] {
+    width: 100%;
+    justify-content: space-between; /* Banderas a la izq, menú a la der */
+    order: 2; /* Va debajo del logo */
+    position: relative;
+  }
+
+  /* 4. Estilo de las banderas en móvil */
+  .lang-switcher {
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+
+  /* 5. Estilo del botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    padding: 0;
+    line-height: 1;
+  }
+
+  /* 6. El menú desplegable de navegación */
   nav ul {
     display: none;
   }
   nav ul.open {
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
+    left: -1rem;
+    right: -1rem;
     background: var(--blanco-roto);
-    flex-direction: column;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--beige-medio);
     box-shadow: 0 10px 15px rgba(0,0,0,0.05);
     gap: 1rem;
-  }
-  
-  .menu-toggle {
-    display: block;
+    z-index: 100;
   }
 
-  /* Arreglar la barra superior para que no se amontone */
-  .nav {
-    padding: 0.8rem 1rem;
-  }
-  
-  /* El logo se adapta mejor */
-  .logo {
-    font-size: 1.25rem;
-    white-space: normal; /* Permite que fluya si es muy largo */
-    line-height: 1.1;
-  }
-  
-  /* Mover las banderas al lado del botón hamburguesa */
-  .lang-switcher {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
-
-  /* Ajustar el slider para que no se vea como una tirita en móvil */
+  /* 7. Ajustes del slider para móvil (un poco más alto) */
   .compare {
     aspect-ratio: 4 / 3 !important;
-    max-width: 100% !important;
   }
   
   .compare .label {
@@ -283,7 +295,7 @@ footer a:hover{color:#fff}
     bottom: 8px;
   }
 
-  /* Galería de resultados a 1 columna en móvil */
+  /* 8. Ajustes de la galería y tipografía */
   #galeria-resultados,
   .grid-2, 
   .grid-3 {
@@ -291,13 +303,11 @@ footer a:hover{color:#fff}
     gap: 2rem !important;
   }
 
-  /* Tipografía general */
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   
   .hero { padding: 3rem 0 2.5rem; }
   
-  /* La foto redonda de About me más pequeña */
   .portrait-container img {
     width: 140px;
     height: 140px;
