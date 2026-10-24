@@ -53,7 +53,7 @@ header{
   border-bottom:1px solid var(--beige-medio);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;max-width:1140px;margin:0 auto}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--verde-oscuro);font-weight:600}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--verde-oscuro);font-weight:600;white-space: nowrap;}
 .logo span{color:var(--salvia)}
 nav ul{display:flex;gap:1.8rem;list-style:none}
 nav a{font-size:.95rem;color:var(--texto);transition:color .2s}
@@ -87,14 +87,14 @@ nav a:hover{color:var(--verde-oscuro)}
 .card .icon{font-size:1.6rem;color:var(--salvia);margin-bottom:.8rem}
 
 /* ==========================================
-   7. Slider Antes/Después (Formato Horizontal)
+   7. Slider Antes/Después
    ========================================== */
 .compare{
   position:relative;
   width:100%;
-  max-width:900px;         /* Ancho máximo para la página de inicio */
+  max-width:900px;
   margin:0 auto;
-  aspect-ratio:16 / 9;     /* Formato horizontal */
+  aspect-ratio:16 / 9;
   overflow:hidden;
   border-radius:10px;
   border:1px solid var(--beige-medio);
@@ -102,7 +102,6 @@ nav a:hover{color:var(--verde-oscuro)}
   isolation:isolate;
 }
 
-/* En la galería de resultados (grid), el slider ocupa el 100% de su columna */
 .compare[style*="max-width: 100%"] {
   max-width: 100%;
 }
@@ -150,7 +149,6 @@ nav a:hover{color:var(--verde-oscuro)}
   font-size:1rem;
 }
 
-/* Etiquetas Antes / Después */
 .compare .label{
   position:absolute;
   bottom:12px;
@@ -169,14 +167,7 @@ nav a:hover{color:var(--verde-oscuro)}
 .compare .label.before{ left:12px; right:auto; }
 .compare .label.after{ right:12px; left:auto; }
 
-/* Metadatos de cada caso (subtítulos) */
-.case-meta{
-  text-align:center;
-  margin-top:1rem;
-  font-size:.9rem;
-  color:var(--texto-suave);
-  font-weight:500;
-}
+.case-meta{text-align:center;margin-top:1rem;font-size:.9rem;color:var(--texto-suave);font-weight:500;}
 
 /* ==========================================
    8. Formulario
@@ -190,7 +181,7 @@ input,textarea,select{
 input:focus,textarea:focus,select:focus{outline:none;border-color:var(--verde-oscuro);box-shadow:0 0 0 3px rgba(31,61,43,.1)}
 
 /* ==========================================
-   9. Footer (Pie de página)
+   9. Footer
    ========================================== */
 footer{background:var(--verde-oscuro);color:var(--beige-claro);padding:3rem 0 1.5rem}
 footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:.8rem}
@@ -200,7 +191,7 @@ footer a:hover{color:#fff}
 .footer-bottom{border-top:1px solid rgba(237,230,218,.2);padding-top:1.2rem;font-size:.85rem;text-align:center;opacity:.8}
 
 /* ==========================================
-   10. Selector de Idioma (Banderas con imagen)
+   10. Selector de Idioma
    ========================================== */
 .lang-switcher {
   display: flex;
@@ -227,37 +218,88 @@ footer a:hover{color:#fff}
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.lang-switcher a:hover {
+.lang-switcher a:hover, .lang-switcher a.active {
   opacity: 1;
   transform: scale(1.1);
 }
 
 .lang-switcher a.active {
-  opacity: 1;
-  transform: scale(1.1);
   border-bottom: 2px solid var(--verde-oscuro);
 }
 
 /* ==========================================
-   11. Responsive (Móviles y Tablets)
+   11. AJUSTES CRÍTICOS PARA MÓVILES (Responsive)
    ========================================== */
 @media(max-width:768px){
-  nav ul{display:none}
-  nav ul.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--blanco-roto);flex-direction:column;padding:1rem 1.5rem;border-bottom:1px solid var(--beige-medio)}
-  .menu-toggle{display:block}
-  .hero{padding:4rem 0 3rem}
-  
-  /* Ajuste de las banderas en móvil */
-  .lang-switcher { 
-    margin-left: 0; 
-    margin-top: 1rem; 
-    justify-content: center; 
-    width: 100%; 
+  /* Ocultar el menú por defecto y mostrar el botón hamburguesa */
+  nav ul {
+    display: none;
   }
-}
+  nav ul.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--blanco-roto);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--beige-medio);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    gap: 1rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
 
-@media(max-width:480px){
-  .compare .label{font-size:.7rem;padding:.3rem .5rem;bottom:8px}
-  .compare .label.before{left:8px}
-  .compare .label.after{right:8px}
+  /* Arreglar la barra superior para que no se amontone */
+  .nav {
+    padding: 0.8rem 1rem;
+  }
+  
+  /* El logo se adapta mejor */
+  .logo {
+    font-size: 1.25rem;
+    white-space: normal; /* Permite que fluya si es muy largo */
+    line-height: 1.1;
+  }
+  
+  /* Mover las banderas al lado del botón hamburguesa */
+  .lang-switcher {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  /* Ajustar el slider para que no se vea como una tirita en móvil */
+  .compare {
+    aspect-ratio: 4 / 3 !important;
+    max-width: 100% !important;
+  }
+  
+  .compare .label {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    bottom: 8px;
+  }
+
+  /* Galería de resultados a 1 columna en móvil */
+  #galeria-resultados,
+  .grid-2, 
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Tipografía general */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .hero { padding: 3rem 0 2.5rem; }
+  
+  /* La foto redonda de About me más pequeña */
+  .portrait-container img {
+    width: 140px;
+    height: 140px;
+  }
 }
