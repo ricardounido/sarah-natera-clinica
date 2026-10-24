@@ -79,7 +79,7 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
    ========================================== */
 @media(max-width: 768px){
   
-  /* 1. El contenedor principal se vuelve una columna */
+  /* 1. Contenedor principal en columna */
   .nav {
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     gap: 0.8rem;
   }
 
-  /* 2. EL NOMBRE VA ARRIBA DEL TODO */
+  /* 2. EL TÍTULO VA ARRIBA (Order 1) */
   .logo {
     order: 1; 
     font-size: 1.25rem;
@@ -97,16 +97,21 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     width: 100%;
   }
 
-  /* 3. LAS BANDERAS VAN EN EL MEDIO */
+  /* 3. "Desarmamos" el contenedor de las banderas y el menú para que fluyan libres */
+  .mobile-bar {
+    display: contents; 
+  }
+
+  /* 4. LAS BANDERAS VAN EN MEDIO (Order 2) */
   .lang-switcher {
     order: 2; 
-    margin-left: 0;
+    margin: 0 auto !important;
     gap: 0.5rem;
     justify-content: center;
     width: 100%;
   }
 
-  /* 4. EL MENÚ DE NAVEGACIÓN VA DEBAJO (Oculto por defecto) */
+  /* 5. EL MENÚ DE NAVEGACIÓN VA DEBAJO (Order 3) */
   nav {
     order: 3;
     width: 100%;
@@ -131,17 +136,17 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     z-index: 100;
   }
 
-  /* 5. EL BOTÓN HAMBURGUESA VA AL FONDO DE TODO */
+  /* 6. EL BOTÓN HAMBURGUESA VA AL FONDO (Order 4) */
   .menu-toggle {
     display: block;
-    order: 4; /* Lo mandamos al fondo */
+    order: 4; 
     font-size: 1.8rem;
     padding: 0;
     line-height: 1;
-    margin-top: 0.5rem;
+    margin: 0.5rem auto 0 auto; /* Centrado */
   }
 
-  /* 6. AJUSTES DE LA GALERÍA DE FOTOS Y SLIDER */
+  /* 7. AJUSTES DE LA GALERÍA DE FOTOS Y SLIDER */
   .container > div[style*="display: grid"] {
     display: flex !important;
     flex-direction: column !important;
@@ -159,7 +164,7 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     bottom: 8px; 
   }
 
-  /* 7. TIPOGRAFÍA Y ESPACIADO */
+  /* 8. TIPOGRAFÍA Y ESPACIADO */
   h1 { font-size: 2rem; } 
   h2 { font-size: 1.5rem; }
   .hero { padding: 3rem 0 2.5rem; }
