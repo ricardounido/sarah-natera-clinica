@@ -17,7 +17,7 @@ body{background:var(--blanco-roto);color:var(--texto);font-family:'Inter',system
 h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--verde-oscuro);font-weight:600;letter-spacing:.2px;line-height:1.2;}
 h1{font-size:clamp(2rem,5vw,3.4rem)} h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:1rem} h3{font-size:1.3rem;margin-bottom:.6rem}
 p{margin-bottom:1rem} a{color:var(--verde-oscuro);text-decoration:none}
-.container{max-width:1140px;margin:0 auto;padding:0 1.25rem}
+.container{max-width:1140px;margin:0 auto;padding:0 1.25rem;}
 section{padding:4.5rem 0} .section-alt{background:var(--beige-claro)} .center{text-align:center}
 
 /* ==========================================
@@ -79,7 +79,7 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
    ========================================== */
 @media(max-width: 768px){
   
-  /* --- 1. HEADER EN MÓVIL --- */
+  /* 1. ARREGLO DEL HEADER (Menú, logo y banderas) */
   .nav {
     flex-direction: column;
     padding: 1rem;
@@ -120,12 +120,14 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     width: 100%;
   }
   
+  /* EL MENÚ ESTÁ OCULTO POR DEFECTO */
   nav ul {
-    display: none;
+    display: none !important; /* Forzamos a que se oculte */
   }
   
+  /* SOLO SE MUESTRA SI TIENE LA CLASE .open */
   nav ul.open {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -139,27 +141,27 @@ footer h4{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;mar
     z-index: 100;
   }
 
-  /* --- 2. AJUSTES DE CONTENIDO --- */
-  
-  /* Sliders un poco más altos */
+  /* 2. ARREGLO DE LA GALERÍA (Para que se vea como en tu captura) */
+  /* Seleccionamos únicamente el div que tiene las fotos en Resultados */
+  .container > div[style*="display: grid"] {
+    display: flex !important;
+    flex-direction: column !important; /* Ponemos las fotos una debajo de otra */
+    gap: 3rem !important; 
+  }
+
+  /* 3. ARREGLO DEL SLIDER */
   .compare { 
     aspect-ratio: 4 / 3 !important; 
+    max-width: 100% !important;
   }
+  
   .compare .label { 
-    font-size: 0.7rem; 
+    font-size: 0.75rem; 
     padding: 0.3rem 0.5rem; 
     bottom: 8px; 
   }
 
-  /* ESTA ES LA CORRECCIÓN CLAVE:
-     Solo hacemos 1 columna la galería de resultados,
-     pero NO tocamos el header (que usa flex). */
-  .container > div[style*="display: grid"] {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-
-  /* Tipografía y espaciados generales */
+  /* 4. AJUSTES DE TIPOGRAFÍA Y ESPACIADO */
   h1 { font-size: 2rem; } 
   h2 { font-size: 1.5rem; }
   .hero { padding: 3rem 0 2.5rem; }
