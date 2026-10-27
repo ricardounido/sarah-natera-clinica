@@ -6,7 +6,7 @@ const traducciones = {
     // Generales
     logo: 'Sarah Natera <span>Clínica Estética</span>',
     logo_footer: 'Sarah Natera · Clínica Estética',
-    nav_inicio: 'Inicio', nav_resultados: 'Resultados', nav_contacto: 'Contacto', nav_about: 'Sobre mí',
+    nav_inicio: 'Inicio', nav_resultados: 'Resultados', nav_contacto: 'Contacto', nav_about: 'Sobre mí', nav_suscribete: 'Suscríbete',
     btn_cita: 'Pedir cita', 
     footer_desc: 'Estética facial y corporal con enfoque médico y natural.',
     footer_nav: 'Navegación', footer_contacto: 'Contacto', 
@@ -76,14 +76,30 @@ const traducciones = {
     about_filosofia_titulo: 'El arte de la naturalidad',
     about_filosofia_texto: 'Creo en la belleza que no grita, sino que susurra. Mi objetivo no es transformar rostros, sino realzar la identidad de cada paciente con armonía y absoluto respeto por la anatomía. Domino las técnicas de armonización para que los resultados se vean frescos, descansados y absolutamente naturales. <strong>Nadie notará que te has hecho un tratamiento, solo que te ves mejor.</strong>',
     about_cta_titulo: '¿Hablamos de tu caso?',
-    about_cta_texto: 'Reserva una consulta personalizada con la Dra. Sarah Natera y descubre cómo podemos realzar tu belleza natural con los más altos estándares médicos.'
+    about_cta_texto: 'Reserva una consulta personalizada con la Dra. Sarah Natera y descubre cómo podemos realzar tu belleza natural con los más altos estándares médicos.',
+
+    // Suscríbete y Gracias
+    sub_titulo: 'Mantente al día',
+    sub_sub: 'Suscríbete para recibir información exclusiva sobre próximos cursos, masterclasses y novedades de la clínica.',
+    sub_nombre: 'Nombre completo', sub_nombre_ph: 'Tu nombre completo',
+    sub_email: 'Correo electrónico', sub_email_ph: 'tu@email.com',
+    sub_profesion: 'Profesión o especialidad (Opcional)', sub_profesion_ph: 'Ej. Médico estético, Dermatólogo, etc.',
+    sub_acepto: 'Acepto los', sub_terminos_link: 'términos y condiciones', sub_terminos_texto: 'y el uso de mi correo con fines publicitarios de la clínica y terceros.',
+    sub_btn: 'Suscribirme',
+    modal_titulo: 'Términos y Condiciones',
+    modal_texto1: 'Al suscribirte, aceptas que Sarah Natera Clínica Estética almacene tu nombre y correo electrónico en su base de datos.',
+    modal_texto2: 'El uso de tu correo electrónico será exclusivamente para enviarte información sobre próximos cursos, masterclasses, newsletters y promociones de nuestra clínica, así como de terceros colaboradores.',
+    modal_texto3: 'Puedes darte de baja de esta lista en cualquier momento haciendo clic en el enlace de "darse de baja" que aparecerá al final de cada correo que te enviemos. Tus datos no serán vendidos a otras empresas.',
+    gracias_titulo: '¡Gracias por suscribirte!',
+    gracias_texto: 'Tu correo ha quedado registrado. Muy pronto recibirás noticias sobre nuestros próximos cursos, masterclasses y novedades de la clínica.',
+    gracias_btn: 'Volver al inicio'
   },
   
   en: {
     // Generales
     logo: 'Sarah Natera <span>Aesthetic Clinic</span>',
     logo_footer: 'Sarah Natera · Aesthetic Clinic',
-    nav_inicio: 'Home', nav_resultados: 'Results', nav_contacto: 'Contact', nav_about: 'About me',
+    nav_inicio: 'Home', nav_resultados: 'Results', nav_contacto: 'Contact', nav_about: 'About me', nav_suscribete: 'Subscribe',
     btn_cita: 'Book appointment', 
     footer_desc: 'Facial and body aesthetics with a medical and natural approach.',
     footer_nav: 'Navigation', footer_contacto: 'Contact', 
@@ -153,14 +169,30 @@ const traducciones = {
     about_filosofia_titulo: 'The art of naturalness',
     about_filosofia_texto: 'I believe in beauty that whispers, not shouts. My goal is not to transform faces, but to enhance each patient\'s identity with harmony and absolute respect for anatomy. I master harmonization techniques so results look fresh, rested, and absolutely natural. <strong>No one will notice you\'ve had a treatment, only that you look better.</strong>',
     about_cta_titulo: 'Shall we discuss your case?',
-    about_cta_texto: 'Book a personalized consultation with Dr. Sarah Natera and discover how we can enhance your natural beauty with the highest medical standards.'
+    about_cta_texto: 'Book a personalized consultation with Dr. Sarah Natera and discover how we can enhance your natural beauty with the highest medical standards.',
+
+    // Suscríbete y Gracias
+    sub_titulo: 'Stay up to date',
+    sub_sub: 'Subscribe to receive exclusive information about upcoming courses, masterclasses and clinic news.',
+    sub_nombre: 'Full name', sub_nombre_ph: 'Your full name',
+    sub_email: 'Email address', sub_email_ph: 'you@email.com',
+    sub_profesion: 'Profession or specialty (Optional)', sub_profesion_ph: 'E.g. Aesthetic doctor, Dermatologist, etc.',
+    sub_acepto: 'I accept the', sub_terminos_link: 'terms and conditions', sub_terminos_texto: 'and the use of my email for advertising purposes by the clinic and third parties.',
+    sub_btn: 'Subscribe',
+    modal_titulo: 'Terms and Conditions',
+    modal_texto1: 'By subscribing, you agree that Sarah Natera Aesthetic Clinic stores your name and email address in its database.',
+    modal_texto2: 'Your email address will be used exclusively to send you information about upcoming courses, masterclasses, newsletters and promotions from our clinic, as well as from third-party collaborators.',
+    modal_texto3: 'You can unsubscribe from this list at any time by clicking the "unsubscribe" link at the bottom of every email we send you. Your data will not be sold to other companies.',
+    gracias_titulo: 'Thank you for subscribing!',
+    gracias_texto: 'Your email has been registered. Very soon you will receive news about our upcoming courses, masterclasses and clinic updates.',
+    gracias_btn: 'Back to home'
   },
   
   sr: {
     // Generales
     logo: 'Sarah Natera <span>Estetska Klinika</span>',
     logo_footer: 'Sarah Natera · Estetska Klinika',
-    nav_inicio: 'Početna', nav_resultados: 'Rezultati', nav_contacto: 'Kontakt', nav_about: 'O meni',
+    nav_inicio: 'Početna', nav_resultados: 'Rezultati', nav_contacto: 'Kontakt', nav_about: 'O meni', nav_suscribete: 'Pretplati se',
     btn_cita: 'Zakažite termin', 
     footer_desc: 'Estetika lica i tela sa medicinskim i prirodnim pristupom.',
     footer_nav: 'Navigacija', footer_contacto: 'Kontakt', 
@@ -230,7 +262,23 @@ const traducciones = {
     about_filosofia_titulo: 'Umetnost prirodnosti',
     about_filosofia_texto: 'Verujem u lepotu koja šapuće, a ne viče. Moj cilj nije da transformišem lica, već da naglasim identitet svakog pacijenta uz harmoniju i apsolutno poštovanje anatomije. Savladavam tehnike harmonizacije tako da rezultati izgledaju sveže, odmorno i potpuno prirodno. <strong>Niko neće primetiti da ste imali tretman, samo da izgledate bolje.</strong>',
     about_cta_titulo: 'Hajde da razgovaramo o vašem slučaju?',
-    about_cta_texto: 'Zakažite personalizovanu konsultaciju sa dr Sarah Naterom i otkrijte kako možemo da naglasimo vašu prirodnu lepotu uz najviše medicinske standarde.'
+    about_cta_texto: 'Zakažite personalizovanu konsultaciju sa dr Sarah Naterom i otkrijte kako možemo da naglasimo vašu prirodnu lepotu uz najviše medicinske standarde.',
+
+    // Suscríbete y Gracias
+    sub_titulo: 'Budite u toku',
+    sub_sub: 'Pretplatite se da biste primali ekskluzivne informacije o predstojećim kursevima, masterklasama i novostima iz klinike.',
+    sub_nombre: 'Ime i prezime', sub_nombre_ph: 'Vaše ime i prezime',
+    sub_email: 'Email adresa', sub_email_ph: 'vi@email.com',
+    sub_profesion: 'Profesija ili specijalnost (Opcionalno)', sub_profesion_ph: 'Npr. estetski lekar, dermatolog, itd.',
+    sub_acepto: 'Prihvatam', sub_terminos_link: 'uslove i odredbe', sub_terminos_texto: 'i korišćenje moje email adrese u reklamne svrhe klinike i trećih lica.',
+    sub_btn: 'Pretplati se',
+    modal_titulo: 'Uslovi i odredbe',
+    modal_texto1: 'Pretplatom se slažete da Estetska klinika Sarah Natera čuva vaše ime i email adresu u svojoj bazi podataka.',
+    modal_texto2: 'Vaša email adresa će se koristiti isključivo za slanje informacija o predstojećim kursevima, masterklasama, biltenima i promocijama naše klinike, kao i trećih saradnika.',
+    modal_texto3: 'Možete se odjaviti sa ove liste u bilo kom trenutku klikom na link "odjavi se" koji se nalazi na dnu svakog emaila koji vam pošaljemo. Vaši podaci neće biti prodati drugim kompanijama.',
+    gracias_titulo: 'Hvala što ste se pretplatili!',
+    gracias_texto: 'Vaša email adresa je registrovana. Vrlo brzo ćete primati vesti o našim predstojećim kursevima, masterklasama i novostima iz klinike.',
+    gracias_btn: 'Povratak na početnu'
   }
 };
 
