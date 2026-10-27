@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suscríbete — Sarah Natera</title>
+<meta name="description" content="Suscríbete para recibir información sobre próximos cursos, masterclasses y novedades de la clínica de la Dra. Sarah Natera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Estilos del Modal (Pop-up) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; width: 100%; height: 100%; 
+    background-color: rgba(26, 31, 28, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center; justify-content: center;
+  }
+  .modal-content {
+    background-color: var(--blanco-roto);
+    padding: 2.5rem; border-radius: 10px;
+    max-width: 600px; width: 90%;
+    max-height: 80vh; overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+  .close-btn {
+    position: absolute; top: 1rem; right: 1.5rem;
+    font-size: 2rem; color: var(--verde-oscuro);
+    cursor: pointer; font-weight: bold;
+  }
+  .close-btn:hover { color: var(--salvia); }
+  
+  /* Estilos del formulario */
+  .checkbox-group {
+    display: flex; align-items: flex-start; gap: 0.8rem;
+    margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--texto-suave);
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: auto; margin-top: 0.2rem;
+    cursor: pointer; accent-color: var(--verde-oscuro);
+  }
+  .checkbox-group a {
+    color: var(--verde-oscuro);
+    text-decoration: underline; cursor: pointer; font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo" data-i18n="logo">Sarah Natera <span>Clínica Estética</span></a>
+    <button class="menu-toggle">☰</button>
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap;">
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+          <li><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></li>
+          <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+          <li><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="suscribete.html" data-i18n="nav_suscribete">Suscríbete</a></li>
+        </ul>
+      </nav>
+      
+      <div class="lang-switcher">
+        <a href="#" onclick="cambiarIdioma('es'); return false;" class="active" title="Español">
+          <img src="https://flagcdn.com/w20/es.png" alt="Español">
+        </a>
+        <a href="#" onclick="cambiarIdioma('en'); return false;" title="English">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English">
+        </a>
+        <a href="#" onclick="cambiarIdioma('sr'); return false;" title="Srpski">
+          <img src="https://flagcdn.com/w20/rs.png" alt="Srpski">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding:4rem 0 3rem">
+  <div class="container">
+    <h1 data-i18n="sub_titulo">Mantente al día</h1>
+    <p data-i18n="sub_sub">Suscríbete para recibir información exclusiva sobre próximos cursos, masterclasses y novedades de la clínica.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:600px">
+    
+    <!-- FORMULARIO NATIVO CONECTADO A GOOGLE -->
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfznghvtK4hrfvnPkm2udPMwuahTZO3p_TsfNElBGvrecon3A/formResponse" method="POST" target="hidden_iframe" onsubmit="return redirigirGracias()">
+      
+      <label for="sub_nombre" data-i18n="sub_nombre">Nombre completo</label>
+      <input id="sub_nombre" name="entry.814358510" required data-i18n-placeholder="sub_nombre_ph" placeholder="Tu nombre completo">
+
+      <label for="sub_email" data-i18n="sub_email">Correo electrónico</label>
+      <input id="sub_email" type="email" name="entry.2097094686" required data-i18n-placeholder="sub_email_ph" placeholder="tu@email.com">
+
+      <label for="sub_profesion" data-i18n="sub_profesion">Profesión o especialidad (Opcional)</label>
+      <input id="sub_profesion" name="entry.2046493444" data-i18n-placeholder="sub_profesion_ph" placeholder="Ej. Médico estético, Dermatólogo, etc.">
+
+      <!-- Casilla de verificación obligatoria (Solo visual en tu web) -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="terminos" required>
+        <label for="terminos" style="margin-bottom:0; font-weight:normal;">
+          <span data-i18n="sub_acepto">Acepto los</span> 
+          <a href="#" onclick="abrirModal(event)" data-i18n="sub_terminos_link">términos y condiciones</a> 
+          <span data-i18n="sub_terminos_texto">y el uso de mi correo con fines publicitarios de la clínica y terceros.</span>
+        </label>
+      </div>
+
+      <!-- Campo oculto para el check de términos (le enviamos un valor fijo a Google) -->
+      <input type="hidden" name="entry.1830016065" value="Opción 1">
+
+      <button type="submit" class="btn btn-primary" data-i18n="sub_btn">Suscribirme</button>
+    </form>
+
+    <!-- Iframe oculto para que Google reciba los datos sin cambiar de página -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { window.location.href='gracias.html'; }"></iframe>
+
+  </div>
+</section>
+
+<!-- Modal de Términos y Condiciones -->
+<div id="modalTerminos" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+    <h2 data-i18n="modal_titulo">Términos y Condiciones</h2>
+    <p data-i18n="modal_texto1" style="font-size: 0.95rem; margin-top: 1rem;">Al suscribirte, aceptas que Sarah Natera Clínica Estética almacene tu nombre y correo electrónico en su base de datos.</p>
+    <p data-i18n="modal_texto2" style="font-size: 0.95rem;">El uso de tu correo electrónico será exclusivamente para enviarte información sobre próximos cursos, masterclasses, newsletters y promociones de nuestra clínica, así como de terceros colaboradores.</p>
+    <p data-i18n="modal_texto3" style="font-size: 0.95rem;">Puedes darte de baja de esta lista en cualquier momento haciendo clic en el enlace de "darse de baja" que aparecerá al final de cada correo que te enviemos. Tus datos no serán vendidos a otras empresas.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-i18n="logo_footer">Sarah Natera · Clínica Estética</h4>
+        <p style="font-size:.9rem;opacity:.9" data-i18n="footer_desc">Estética facial y corporal con enfoque médico y natural.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_nav">Navegación</h4>
+        <p><a href="index.html" data-i18n="nav_inicio">Inicio</a></p>
+        <p><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></p>
+        <p><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></p>
+        <p><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></p>
+        <p><a href="suscribete.html" data-i18n="nav_suscribete">Suscríbete</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contacto">Contacto</h4>
+        <p style="font-size:.9rem">
+          Kralja Aleksandra Obrenovića 52<br>
+          Mladenovac, Belgrade Metropolitan Area<br>
+          <a href="mailto:info@sarahnatera.com" style="color:var(--beige-claro); text-decoration:underline;">info@sarahnatera.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> <span data-i18n="footer_copy">Sarah Natera. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Lógica del Modal
+  function abrirModal(event) {
+    event.preventDefault();
+    document.getElementById('modalTerminos').style.display = 'flex';
+  }
+  function cerrarModal() {
+    document.getElementById('modalTerminos').style.display = 'none';
+  }
+  window.onclick = function(event) {
+    const modal = document.getElementById('modalTerminos');
+    if (event.target === modal) modal.style.display = 'none';
+  }
+
+  // Lógica para redirigir después de enviar
+  let submitted = false;
+  function redirigirGracias() {
+    submitted = true;
+    return true;
+  }
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

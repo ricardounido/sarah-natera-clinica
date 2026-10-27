@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Gracias! — Sarah Natera</title>
+<meta name="description" content="Gracias por suscribirte a la lista de la Clínica Estética Sarah Natera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="logo" data-i18n="logo">Sarah Natera <span>Clínica Estética</span></a>
+    <button class="menu-toggle">☰</button>
+    
+    <div style="display: flex; align-items: center; flex-wrap: wrap;">
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+          <li><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></li>
+          <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+          <li><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="suscribete.html" data-i18n="nav_suscribete">Suscríbete</a></li>
+        </ul>
+      </nav>
+      
+      <div class="lang-switcher">
+        <a href="#" onclick="cambiarIdioma('es'); return false;" class="active" title="Español">
+          <img src="https://flagcdn.com/w20/es.png" alt="Español">
+        </a>
+        <a href="#" onclick="cambiarIdioma('en'); return false;" title="English">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English">
+        </a>
+        <a href="#" onclick="cambiarIdioma('sr'); return false;" title="Srpski">
+          <img src="https://flagcdn.com/w20/rs.png" alt="Srpski">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding: 8rem 0; min-height: 60vh; display: flex; align-items: center;">
+  <div class="container center">
+    <div style="font-size: 4rem; color: var(--salvia); margin-bottom: 1rem;">✦</div>
+    <h1 data-i18n="gracias_titulo">¡Gracias por suscribirte!</h1>
+    <p style="max-width: 600px; margin: 1.5rem auto 2.5rem; color: var(--texto-suave); font-size: 1.1rem;" data-i18n="gracias_texto">
+      Tu correo ha quedado registrado. Muy pronto recibirás noticias sobre nuestros próximos cursos, masterclasses y novedades de la clínica.
+    </p>
+    <a href="index.html" class="btn btn-primary" data-i18n="gracias_btn">Volver al inicio</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 data-i18n="logo_footer">Sarah Natera · Clínica Estética</h4>
+        <p style="font-size:.9rem;opacity:.9" data-i18n="footer_desc">Estética facial y corporal con enfoque médico y natural.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_nav">Navegación</h4>
+        <p><a href="index.html" data-i18n="nav_inicio">Inicio</a></p>
+        <p><a href="resultados.html" data-i18n="nav_resultados">Resultados</a></p>
+        <p><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></p>
+        <p><a href="aboutme.html" data-i18n="nav_about">Sobre mí</a></p>
+        <p><a href="suscribete.html" data-i18n="nav_suscribete">Suscríbete</a></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contacto">Contacto</h4>
+        <p style="font-size:.9rem">
+          Kralja Aleksandra Obrenovića 52<br>
+          Mladenovac, Belgrade Metropolitan Area<br>
+          <a href="mailto:info@sarahnatera.com" style="color:var(--beige-claro); text-decoration:underline;">info@sarahnatera.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> <span data-i18n="footer_copy">Sarah Natera. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
