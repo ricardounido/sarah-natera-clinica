@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  /* Estilos específicos para un aire de clínica de élite */
   .about-content p, 
   .about-content li {
     color: var(--texto);
@@ -24,8 +23,6 @@
   .about-content li {
     margin-bottom: 1.2rem;
   }
-  
-  /* El retrato de autoridad */
   .portrait-container {
     text-align: center;
     margin: 2rem 0 3.5rem 0;
@@ -74,7 +71,6 @@
   </div>
 </header>
 
-<!-- Portada con el nombre -->
 <section class="hero" style="padding:4rem 0 2rem">
   <div class="container">
     <h1 data-i18n="about_titulo">Sarah Natera</h1>
@@ -82,16 +78,13 @@
   </div>
 </section>
 
-<!-- Sección de contenido con la foto redonda -->
 <section class="about-content">
   <div class="container" style="max-width:820px">
     
-    <!-- Foto redonda e íntima -->
     <div class="portrait-container">
       <img src="assets/img/sarah.jfif" alt="Dra. Sarah Natera" loading="lazy">
     </div>
 
-    <!-- Sección 1: Trayectoria -->
     <h2 data-i18n="about_trayectoria_titulo" style="margin-top:0">Una médico dedicada a la estética</h2>
     
     <p data-i18n="about_trayectoria_texto1">La Dra. Sarah Natera es <strong>Médico Cirujano</strong>, no solo es una aplicadora de tratamientos. Su carrera se ha centrado durante años de forma exclusiva en la medicina estética facial y corporal, combinando la práctica clínica de alta gama con la formación de otros médicos a nivel global.</p>
@@ -100,7 +93,6 @@
 
     <hr style="border: 0; border-top: 1px solid var(--beige-medio); margin: 3rem 0;">
 
-    <!-- Sección 2: Por qué confiar -->
     <h2 data-i18n="about_confiar_titulo">Por qué confiar en la Dra. Sarah Natera</h2>
     
     <ul>
@@ -115,7 +107,6 @@
 
     <hr style="border: 0; border-top: 1px solid var(--beige-medio); margin: 3rem 0;">
 
-    <!-- Sección 3: Filosofía -->
     <h2 data-i18n="about_filosofia_titulo">El arte de la naturalidad</h2>
     
     <p data-i18n="about_filosofia_texto">Creo en la belleza que no grita, sino que susurra. Mi objetivo no es transformar rostros, sino realzar la identidad de cada paciente con armonía y absoluto respeto por la anatomía. Domino las técnicas de armonización para que los resultados se vean frescos, descansados y absolutamente naturales. <strong>Nadie notará que te has hecho un tratamiento, solo que te ves mejor.</strong></p>
@@ -147,10 +138,14 @@
       </div>
       <div>
         <h4 data-i18n="footer_contacto">Contacto</h4>
-        <p style="font-size:.9rem">Calle Ejemplo 123<br>Ciudad<br>hola@tuclinica.com</p>
+        <p style="font-size:.9rem">
+          Kralja Aleksandra Obrenovića 52<br>
+          Mladenovac, Belgrade Metropolitan Area<br>
+          <a href="mailto:info@sarahnatera.com" style="color:var(--beige-claro); text-decoration:underline;">info@sarahnatera.com</a>
+        </p>
       </div>
     </div>
-    <div class="footer-bottom" data-i18n="footer_copy">© 2025 Sarah Natera. Todos los derechos reservados.</div>
+    <div class="footer-bottom" data-i18n="footer_copy">© <span id="year"></span> Sarah Natera. Todos los derechos reservados.</div>
   </div>
 </footer>
 
