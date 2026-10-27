@@ -10,7 +10,7 @@ const traducciones = {
     btn_cita: 'Pedir cita', 
     footer_desc: 'Estética facial y corporal con enfoque médico y natural.',
     footer_nav: 'Navegación', footer_contacto: 'Contacto', 
-    footer_copy: '© 2025 Sarah Natera. Todos los derechos reservados.',
+    footer_copy: 'Sarah Natera. Todos los derechos reservados.',
     
     // Index
     hero_titulo: 'Belleza natural, resultados reales',
@@ -87,7 +87,7 @@ const traducciones = {
     btn_cita: 'Book appointment', 
     footer_desc: 'Facial and body aesthetics with a medical and natural approach.',
     footer_nav: 'Navigation', footer_contacto: 'Contact', 
-    footer_copy: '© 2025 Sarah Natera. All rights reserved.',
+    footer_copy: 'Sarah Natera. All rights reserved.',
     
     // Index
     hero_titulo: 'Natural beauty, real results',
@@ -164,7 +164,7 @@ const traducciones = {
     btn_cita: 'Zakažite termin', 
     footer_desc: 'Estetika lica i tela sa medicinskim i prirodnim pristupom.',
     footer_nav: 'Navigacija', footer_contacto: 'Kontakt', 
-    footer_copy: '© 2025 Sarah Natera. Sva prava zadržana.',
+    footer_copy: 'Sarah Natera. Sva prava zadržana.',
     
     // Index
     hero_titulo: 'Prirodna lepota, pravi rezultati',
@@ -264,11 +264,18 @@ function cambiarIdioma(idioma) {
   document.documentElement.lang = idioma;
 }
 
-// Al cargar la página, recuperar el idioma guardado
+// Al cargar la página, recuperar el idioma guardado y actualizar el año
 window.addEventListener('DOMContentLoaded', () => {
+  // 1. Idioma guardado
   const idiomaGuardado = localStorage.getItem('idiomaClinica') || 'es';
   if (idiomaGuardado !== 'es') {
     cambiarIdioma(idiomaGuardado);
+  }
+
+  // 2. Actualizar el año del copyright automáticamente
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
   }
 });
 
