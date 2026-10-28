@@ -231,7 +231,7 @@ const traducciones = {
     res_meta15: 'Tretman bora između obrva Dysportom.',
     res_meta16: 'Dubinsko čišćenje lica HydraFacial Syndeo.',
     res_meta17: 'Povećanje usana i tretman bora oko usana hijaluronskom kiselinom.',
-    res_meta18: 'Tretman nazolabijalnih bora i bora marionete hijaluronskom kiselinom.',
+    res_meta18: 'Tretman nazolabijalnih i marionetskih bora hijaluronskom kiselinom.',
     res_cta_titulo: 'Želite da znate da li je za vas?',
     res_cta_texto: 'Svaki slučaj je drugačiji. Na konsultacijama procenjujemo vašu početnu tačku i objašnjavamo realna očekivanja, potrebne sesije i negu nakon tretmana.',
     
